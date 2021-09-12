@@ -1,0 +1,19 @@
+1. user1 = User.objects.create_user(username= "randomName")
+2. rand_aut = Author.objects.create(relation = "user1")
+3. random_cat_name = Category.objects.create(namecat = "randomName")
+4. Post.objects.create(post_author = rand_aut, field_choise = 'NW', title = 'randomtitle', text = 'randomtext)')
+5. Post.objects.get(id = 1).PostCategory.add(Category.objects.get(id = 2))
+6. Comment.objects.create(post_comm = Post.objects.get(id = 3), user_comm = Author.objects.get(id = 2).relation, comm_text = 'text')
+7. Comment.objects.get(id=1).like()
+Post.objects.get(id=2).dislike()
+8.Author.objects.get(id=1).update_rating()
+9.top_aut = Author.objects.order_by("-rating_aut")[:1]
+for i in top_aut:
+    i.rating_aut
+    i.relation.username
+top_post - Post.objects.order_by("-rating_post")
+for i in top_post:
+    i.time_wr
+    i.post_category
+    i.title
+    i.post_text
